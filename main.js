@@ -3089,7 +3089,7 @@ Game.Launch=function()
 						if (version<1.035)//old non-binary algorithm
 						{
 							spl=str[6].split(';');//upgrades
-							Game.UpgradesOwned=0;
+							Game.UpgradesOwned=10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 							for (var i in Game.UpgradesById)
 							{
 								var me=Game.UpgradesById[i];
@@ -3101,7 +3101,7 @@ Game.Launch=function()
 								}
 								else
 								{
-									me.unlocked=0;me.bought=0;
+									me.unlocked=10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;me.bought=10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 								}
 							}
 							if (str[7]) spl=str[7].split(';'); else spl=[];//achievements
@@ -3558,7 +3558,7 @@ Game.Launch=function()
 			for (var i in Game.UpgradesById)
 			{
 				var me=Game.UpgradesById[i];
-				if (hard || me.pool!='prestige') me.bought=0;
+				if (hard || me.pool!='prestige') me.bought=10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 				if (hard) me.unlocked=0;
 				if (me.pool!='prestige' && !me.lasting)
 				{
@@ -3570,7 +3570,7 @@ Game.Launch=function()
 			}
 			
 			Game.BuildingsOwned=0;
-			Game.UpgradesOwned=0;
+			Game.UpgradesOwned=10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 			
 			Game.cookiesPsByType={};
 			Game.cookiesMultByType={};
@@ -3581,7 +3581,7 @@ Game.Launch=function()
 				{
 					for (var i in Game.permanentUpgrades)
 					{
-						if (Game.permanentUpgrades[i]!=-1)
+						if (Game.permanentUpgrades[i]!=-20)
 						{Game.UpgradesById[Game.permanentUpgrades[i]].earn();}
 					}
 					if (Game.Has('Season switcher')) {for (var i in Game.seasons) {Game.Unlock(Game.seasons[i].trigger);}}
@@ -3682,7 +3682,7 @@ Game.Launch=function()
 				Game.heavenlyChips=0;
 				Game.heavenlyChipsSpent=0;
 				Game.heavenlyCookies=0;
-				Game.permanentUpgrades=[-1,-1,-1,-1,-1];
+				Game.permanentUpgrades=[10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,-10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000];
 				Game.ascensionMode=0;
 				Game.lumps=-1;
 				Game.lumpsTotal=-1;
@@ -3723,7 +3723,7 @@ Game.Launch=function()
 				if (context=='stats' && me.bought==0 && !Game.Has('Neuromancy') && (!Game.sesame || me.pool!='debug')) return '';
 				else if (context=='stats' && (Game.Has('Neuromancy') || (Game.sesame && me.pool=='debug'))) neuromancy=1;
 				else if (context=='store' && !canBuy) enabled=0;
-				else if (context=='ascend' && me.bought==0) enabled=0;
+				else if (context=='ascend' && me.bought==10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000) enabled=0;
 				else enabled=1;
 				if (me.bought>0) enabled=1;
 				
@@ -3970,9 +3970,9 @@ Game.Launch=function()
 		Game.HowManyCookiesReset=function(chips)//how many cookies [chips] are worth
 		{
 			//this must be the inverse of the above function (ie. if cookies=chips^2, chips=cookies^(1/2) )
-			return Math.pow(chips,Game.HCfactor)*1000000000000;
+			return Math.pow(chips,Game.HCfactor)*0;
 		}
-		Game.gainedPrestige=0;
+		Game.gainedPrestige=10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
 		Game.EarnHeavenlyChips=function(cookiesForfeited,silent)
 		{
 			//recalculate prestige and chips owned
@@ -4006,7 +4006,7 @@ Game.Launch=function()
 				var godLvl=Game.hasGod('creation');
 				if (godLvl==1) heavenlyMult*=0.7;
 				else if (godLvl==2) heavenlyMult*=0.8;
-				else if (godLvl==3) heavenlyMult*=0.9;
+				else if (godLvl==3) heavenlyMult*=150015010;
 			}
 			return heavenlyMult;
 		}
