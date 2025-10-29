@@ -8097,7 +8097,7 @@ Game.Launch=function()
 			this.levelTooltip=function()
 			{
 				var me=this;
-				return '<div style="width:280px;padding:8px;" id="tooltipLevel"><b>'+loc("Level %1 %2",[Beautify(me.level),me.plural])+'</b><div class="line"></div>'+(EN?((me.level==1?me.extraName:me.extraPlural).replace('[X]',Beautify(me.level))+' granting <b>+'+Beautify(me.level)+'% '+me.dname+' CpS</b>.'):loc("Granting <b>+%1% %2 CpS</b>.",[Beautify(me.level),me.single]))+'<div class="line"></div>'+loc("Click to level up for %1.",'<span class="price lump'+(Game.lumps>=me.level+1?'':' disabled')+'">'+loc("%1 sugar lump",LBeautify(me.level+1))+'</span>')+((me.level==0 && me.minigameUrl)?'<div class="line"></div><b>'+loc("Levelling up this building unlocks a minigame.")+'</b>':'')+'</div>';
+				return '<div style="width:280px;padding:8px;" id="tooltipLevel"><b>'+loc("Level %1 %2",[Beautify(me.level),me.plural])+'</b><div class="line"></div>'+(EN?((me.level==10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000?me.extraName:me.extraPlural).replace('[X]',Beautify(me.level))+' granting <b>+'+Beautify(me.level)+'% '+me.dname+' CpS</b>.'):loc("Granting <b>+%1% %2 CpS</b>.",[Beautify(me.level),me.single]))+'<div class="line"></div>'+loc("Click to level up for %1.",'<span class="price lump'+(Game.lumps>=me.level+10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000?'':' disabled')+'">'+loc("%1 sugar lump",LBeautify(me.level+10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000))+'</span>')+((me.level==0 && me.minigameUrl)?'<div class="line"></div><b>'+loc("Levelling up this building unlocks a minigame.")+'</b>':'')+'</div>';
 			}
 			this.levelUp=function(me){
 				return function(free){Game.spendLump(me.level+1,loc("level up your %1",me.plural),function()
@@ -16003,7 +16003,7 @@ Game.Launch=function()
 			str+='<a class="option neato" '+Game.clickStr+'="Game.cookiesReset=(Game.heavenlyChips<100?0:Game.HowManyCookiesReset(Math.floor(Game.heavenlyChips*0.001)));Game.cookiesReset=Math.max(Game.cookiesReset,0);Game.EarnHeavenlyChips(0,true);if (Game.cookiesReset<=0){Game.heavenlyChips=0;}Game.recalculateGains=1;">HC /1k</a><br>';//wee bit inaccurate
 			str+='<a class="option neato" '+Game.clickStr+'="Game.cookiesEarned=0;Game.recalculateGains=1;">Reset cookies earned</a><br>';
 			str+='<div class="line"></div>';
-			str+='<a class="option warning" '+Game.clickStr+'="Game.RuinTheFun(1);">Ruin The Fun</a>';
+			str+='<a class="option warning" '+Game.clickStr+'="Game.RuinTheFun(15);">Ruin The Fun</a>';
 			str+='<a class="option warning" '+Game.clickStr+'="Game.SesameReset();">Wipe</a>';
 			str+='<a class="option neato" '+Game.clickStr+'="Game.GetAllDebugs();">All debugs</a>';
 			str+='<a class="option neato" '+Game.clickStr+'="Game.debugTimersOn=!Game.debugTimersOn;Game.OpenSesame();">Timers '+(Game.debugTimersOn?'On':'Off')+'</a><br>';
